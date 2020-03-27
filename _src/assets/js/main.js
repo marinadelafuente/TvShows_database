@@ -5,6 +5,8 @@ const button = document.querySelector('.js-button');
 let favoriteShowList = document.querySelector('.js-shows-favorite');
 let showList = document.querySelector('.js-shows-list');
 let resetButton = document.querySelector('.js-reset-button');
+let resultsTitle = document.querySelector('.js__content__title');
+let resultsTitleFav = document.querySelector('.js__content__fav');
 
 let tvShows = [];
 let favTvShows = [];
@@ -53,14 +55,16 @@ const paintShows = function () {
       htmlCode += `<li class="js-show show__container" id=${tvShows[i].show.id}>`;
     }
     if (tvShows[i].show.image === null) {
-      htmlCode += `<img src ='https://via.placeholder.com/210x295/ffffff/666666/?text=TV.'>`;
+      htmlCode += `<img class="show__container-img" src ='https://via.placeholder.com/210x295/ffffff/666666/?text=TV.'>`;
     } else {
-      htmlCode += `<img class="show__img" src= ${tvShows[i].show.image.medium} alt= ${tvShows[i].show.name}>`;
+      htmlCode += `<img class="show__container-img" src= ${tvShows[i].show.image.medium} alt= ${tvShows[i].show.name}>`;
     }
     htmlCode += `<h3 class="show__title">${tvShows[i].show.name}</h3>`;
     htmlCode += `</li>`;
 
   }
+  resultsTitle.classList.remove('hidden');
+  resultsTitleFav.classList.remove('hidden');
   showList.innerHTML = htmlCode;
 };
 
@@ -102,6 +106,7 @@ const changeFavs = function (event) {
   listenShows();
   setLocalStorage();
   paintFavShows();
+
 
   let closeButtons = document.querySelectorAll('.js-close-button');
   for (const closeButton of closeButtons) {
