@@ -10,7 +10,6 @@ html {
 }
 
 body {
-  // background: black;
   color: white;
   font-family: "Solway", serif;
   margin: 0;
@@ -59,6 +58,7 @@ body {
   cursor: pointer;
   transition: all ease-in 0.4s;
   font-family: "Solway", serif;
+  outline-width: 0;
 
   &:hover {
     transform: scale(1.1);
@@ -101,7 +101,6 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: underline;
-
 }
 
 .show-list {
@@ -126,7 +125,6 @@ body {
     color: black;
     color: white;
     background-color: rgba(245, 242, 242, 0.082);
-    // border: groove rgba(245, 242, 242, 0.295);
     width: 190px;
 
 
@@ -138,11 +136,8 @@ body {
 
     &-click {
       cursor: pointer;
-      // border: solid red;
-      background-color: rgba(99, 20, 20, 0.514);
-      // margin: 1.5rem 0.5rem 0.5rem 2rem;
+      background-color: rgba(230, 233, 80, 0.575);
       color: white;
-      // padding: 0;
     }
 
     &-fav {
@@ -193,11 +188,14 @@ body {
   background-color: rgba(230, 223, 223, 0.986);
   font-weight: 700;
   border: rgba(230, 223, 223, 0.986) solid 2px;
+  outline-width: 0;
+  transition: all ease-in 0.4s;
 
   &:hover {
     box-shadow: 0px 0px 20px grey;
     font-weight: bold;
     border: white solid 2px;
+    transform: scale(1.1);
   }
 }
 
