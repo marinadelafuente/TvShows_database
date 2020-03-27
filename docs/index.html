@@ -15,6 +15,8 @@
         <header class="header">
              <h1 class="title">TV Shows Database</h1>
 
+             <h3 class="subtitle">Too many shows to watch? Look for your favourite Tv Shows and save them in your list so you never forget again.</h3>
+
         </header>
         <main class="main">
             <form class="form">
@@ -23,22 +25,22 @@
                 <button class="js-button button">Search</button>
             </form>
             <section class="content-wrapper">
-                <div class="favorites">
-                     <h3 class="content__title content__title__fav">
-            My favourite Shows:
-          </h3>
+                <div class="results">
+                     <h3 class="js__content__title__results content__title js__content__title hidden">Results</h3>
+
+                    <ul class="js-shows-list show-list__results"></ul>
+                </div>
+                <div class="favorites js__content__fav hidden">
+                     <h3 class="content__title content__title__fav ">
+          My favourite Shows
+        </h3>
 
                     <button class="reset-fav js-reset-button">Reset</button>
                     <ul class="js-shows-favorite show-list__favorite"></ul>
-                </div>
-                <div class="results">
-                     <h3 class="content__title content__title__results">Results</h3>
-
-                    <ul class="js-shows-list show-list__results"></ul>
                 </div>
             </section>
         </main>
         <script type="text/javascript" src="./assets/js/main.js"></script>
     </body>
 
-</html>© 2019 GitHub, Inc.
+</html>
