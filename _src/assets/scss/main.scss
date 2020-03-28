@@ -33,8 +33,9 @@ body {
 }
 
 .subtitle {
-  font-family: "Permanent Marker", cursive;
-  font-size: 1.5rem;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 400;
+  font-size: 1.7rem;
 }
 
 .form {
@@ -77,6 +78,13 @@ body {
   font-size: 1.6rem;
 }
 
+::placeholder {
+  color: white;
+  // font-size: 1rem;
+  opacity: 0.5;
+
+}
+
 .content-wrapper {
   display: flex;
   flex-direction: row;
@@ -98,7 +106,7 @@ body {
 
 .content__title {
   font-size: 1.7rem;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   text-decoration: underline;
 }
@@ -186,10 +194,12 @@ body {
   border-radius: 2rem;
   cursor: pointer;
   background-color: rgba(230, 223, 223, 0.986);
-  font-weight: 700;
+  font-weight: 600;
   border: rgba(230, 223, 223, 0.986) solid 2px;
   outline-width: 0;
   transition: all ease-in 0.4s;
+  font-family: "Solway", serif;
+  text-transform: uppercase;
 
   &:hover {
     box-shadow: 0px 0px 20px grey;

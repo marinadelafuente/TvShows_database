@@ -122,9 +122,13 @@ const listenShows = function () {
 };
 
 const reset = function (event) {
+  const tvShowElements = document.querySelectorAll('.js-show');
   event.preventDefault();
   favTvShows = [];
   paintFavShows();
+  tvShowElements.forEach(tvShowElement => {
+    tvShowElement.classList.remove('show__container-click');
+  })
 }
 
 resetButton.addEventListener('click', reset);
